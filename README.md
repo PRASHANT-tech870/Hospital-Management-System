@@ -191,14 +191,6 @@ hospital-management-system/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License 📄
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support 💬
-For support:
-- Create an issue in the repository
-- Contact: support@hms.com
-- Documentation: [Wiki](link-to-wiki)
 
 ## Acknowledgments 🙏
 - FastAPI documentation and community
