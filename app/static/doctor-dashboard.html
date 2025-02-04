@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard - HMS</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/shared-dashboard.css">
+  <!-- Add Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Doctor Dashboard</h1>
+      <p class="subtitle">Welcome, Dr. <span id="doctor-name">Doctor</span></p>
+    </header>
+
+    <!-- AI Tools Card -->
+    <div class="dashboard-card ai-tools-card">
+      <h3>AI Assistance Tool</h3>
+      <p>Access our advanced AI tools to assist with patient diagnosis and medical text analysis</p>
+      <a href="http://localhost:8501/" target="_blank" class="ai-button">
+        <span class="material-icons">psychology</span>
+        Launch AI Assistant
+      </a>
+    </div>
+
+    <div class="dashboard-container">
+      <!-- Patient Medical History Card -->
+      <div class="dashboard-card">
+        <h3>Patient Medical History</h3>
+        <div class="form-group">
+          <select id="patient-select">
+            <option value="">Select Patient</option>
+            <!-- Will be populated with patients -->
+          </select>
+        </div>
+        <div id="patient-history-list"></div>
+        <div id="add-note-section" style="display: none;">
+          <h4>Add Medical Note</h4>
+          <form id="note-form" class="form-group">
+            <textarea id="doctor-note" placeholder="Enter your medical note" required></textarea>
+            <button type="submit" class="login-btn">Add Note</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Schedule Management Card -->
+      <div class="dashboard-card">
+        <h3>Schedule Management</h3>
+        <form id="schedule-form">
+          <div class="form-group">
+            <label for="day">Day of Week</label>
+            <select id="day" required>
+              <option value="0">Monday</option>
+              <option value="1">Tuesday</option>
+              <option value="2">Wednesday</option>
+              <option value="3">Thursday</option>
+              <option value="4">Friday</option>
+              <option value="5">Saturday</option>
+              <option value="6">Sunday</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="start-time">Start Time</label>
+            <input type="time" id="start-time" required>
+          </div>
+          <div class="form-group">
+            <label for="end-time">End Time</label>
+            <input type="time" id="end-time" required>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="is-available" checked>
+              Available for Appointments
+            </label>
+          </div>
+          <button type="submit" class="login-btn">Update Schedule</button>
+        </form>
+      </div>
+
+      <!-- Appointments Management Card -->
+      <div class="dashboard-card">
+        <h3>Appointments</h3>
+        <div class="appointment-filters">
+          <select id="status-filter">
+            <option value="all">All Appointments</option>
+            <option value="SCHEDULED">Scheduled</option>
+            <option value="CONFIRMED">Confirmed</option>
+            <option value="COMPLETED">Completed</option>
+            <option value="CANCELLED">Cancelled</option>
+          </select>
+          <input type="date" id="date-filter">
+        </div>
+        <div id="appointments-list" class="appointments-container">
+          <!-- Appointments will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+      <p>© 2024 Hospital Management System</p>
+    </footer>
+  </div>
+  <script src="/static/dashboard.js"></script>
+  <script src="/static/doctor-schedule.js"></script>
+  <script src="/static/doctor-medical-view.js"></script>
+</body>
+</html>

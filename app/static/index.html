@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/shared-dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hospital Management System</h1>
+      <p class="subtitle">Welcome to our healthcare platform</p>
+    </header>
+
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="role">Select Role</label>
+          <select id="role" required>
+            <option value="">-- Select Role --</option>
+            <option value="PATIENT">Patient</option>
+            <option value="DOCTOR">Doctor</option>
+            <option value="STAFF">Staff</option>
+          </select>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <div id="error-message" class="error-message">Invalid credentials. Please try again.</div>
+      <p class="register-link">Don't have an account? <a href="/register">Register here</a></p>
+      <p class="admin-link">Admin? <a href="/admin-login">Login here</a></p>
+    </div>
+
+    <footer>
+      <p>© 2024 Hospital Management System. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>

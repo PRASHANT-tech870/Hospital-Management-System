@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - HMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/shared-dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <p class="subtitle">Welcome, <span id="admin-name">Admin</span></p>
+        </header>
+
+        <div class="dashboard-container">
+            <!-- Users Management Card -->
+            <div class="dashboard-card">
+                <h3>Users Management</h3>
+                <div class="department-filter">
+                    <select id="department-select" onchange="filterByDepartment()">
+                        <option value="">All Departments</option>
+                    </select>
+                    <select id="user-type-select" onchange="filterByUserType()">
+                        <option value="all">All Users</option>
+                        <option value="patients">Patients</option>
+                        <option value="doctors">Doctors</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                </div>
+                <div id="users-list" class="users-list">
+                    <!-- Users will be displayed here -->
+                </div>
+            </div>
+
+            <!-- Staff-Patient Assignment Card -->
+            <div class="dashboard-card">
+                <h3>Staff-Patient Assignment</h3>
+                <form id="assignment-form" class="form-group">
+                    <select id="staff-select" required>
+                        <option value="">Select Staff Member</option>
+                    </select>
+                    <select id="patient-select" required>
+                        <option value="">Select Patient</option>
+                    </select>
+                    <button type="submit" class="login-btn">Assign Patient</button>
+                </form>
+                <div id="assignments-list"></div>
+            </div>
+
+            <!-- Equipment Management Card -->
+            <div class="dashboard-card">
+                <h3>Equipment Management</h3>
+                <button class="login-btn" onclick="showAddEquipmentForm()">Add New Equipment</button>
+                <div id="add-equipment-form" style="display: none;">
+                    <form id="equipment-form" class="form-group">
+                        <input type="text" id="equipment-name" placeholder="Equipment Name" required>
+                        <select id="equipment-category" required>
+                            <option value="">Select Category</option>
+                            <option value="MEDICAL">Medical</option>
+                            <option value="LAB">Laboratory</option>
+                            <option value="GENERAL">General</option>
+                        </select>
+                        <select id="equipment-status" required>
+                            <option value="">Select Status</option>
+                            <option value="AVAILABLE">Available</option>
+                            <option value="IN_USE">In Use</option>
+                            <option value="MAINTENANCE">Maintenance</option>
+                        </select>
+                        <select id="equipment-department" required>
+                            <option value="">Select Department</option>
+                        </select>
+                        <input type="number" id="equipment-quantity" placeholder="Quantity" min="1" required>
+                        <button type="submit" class="login-btn">Add Equipment</button>
+                    </form>
+                </div>
+                <div id="equipment-list"></div>
+            </div>
+        </div>
+
+        <footer>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+            <p> 2024 Hospital Management System</p>
+        </footer>
+    </div>
+    <script src="/static/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - HMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/shared-dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Staff Dashboard</h1>
+            <p class="subtitle">Welcome, <span id="staff-name">Staff</span></p>
+        </header>
+
+        <div class="dashboard-container">
+            <!-- Assigned Patients Card -->
+            <div class="dashboard-card">
+                <h3>My Assigned Patients</h3>
+                <div id="assigned-patients-list"></div>
+            </div>
+
+            <!-- Patient Details Card -->
+            <div class="dashboard-card">
+                <h3>Patient Details</h3>
+                <select id="patient-select">
+                    <option value="">Select Patient</option>
+                </select>
+                <div id="patient-details"></div>
+            </div>
+        </div>
+
+        <footer>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+            <p>© 2024 Hospital Management System</p>
+        </footer>
+    </div>
+    <script src="/static/staff-dashboard.js"></script>
+</body>
+</html> 
