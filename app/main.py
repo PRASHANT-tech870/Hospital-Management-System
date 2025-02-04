@@ -115,3 +115,10 @@ async def staff_dashboard():
 @app.get("/admin-login", response_class=HTMLResponse)
 async def admin_login_page():
     return FileResponse('app/static/admin-login.html')
+
+
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=10000)
+
