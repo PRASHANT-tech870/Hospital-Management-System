@@ -1,6 +1,4 @@
-I'll create the comprehensive README.md file for your project:
 
-```markdown:README.md
 # Hospital Management System (HMS) 🏥
 
 A modern, full-stack Hospital Management System built with FastAPI and SQLite, featuring a professional UI for managing hospital operations efficiently. The system provides dedicated portals for patients, doctors, staff, and administrators.
