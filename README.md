@@ -1,6 +1,11 @@
 
 # Hospital Management System (HMS) 🏥
 
+## Live Demo 🚀
+You can check out the live version of the Hospital Management System at the following link:  
+[Live Demo](https://hospital-management-system-fwv8.onrender.com/)
+
+
 A modern, full-stack Hospital Management System built with FastAPI and SQLite, featuring a professional UI for managing hospital operations efficiently. The system provides dedicated portals for patients, doctors, staff, and administrators.
 
 ## Features 🌟
